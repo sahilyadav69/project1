@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Bootstrap Template demo</title>
+    <link rel="stylesheet" href="./fontawesome-free-6.7.2-web/css/all.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            font-family: "Poppins", sans-serif;
+
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        header {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .homepage {
+            height: 100vh;
+            width: 100vw;
+            /* border: 1px solid red; */
+            background-color: rgba(6, 6, 6, 0.5);
+            background-image: url(./ASSET/1ST\ BGIMG.jpg);
+            backdrop-filter: brightness(0.5);
+            /* filter: brightness(50%); */
+            /* opacity: 0.4 gray; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* position: fixed; */
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .homepage::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .homepagecontent {
+            /* opacity: 1; */
+            color: white;
+            position: relative;
+            top: 250px;
+            left: 170px;
+            /* z-index: 1;   */
+            /* transition: transform 2s; */
+            animation: homepagecontent 3s 1;
+            animation-timing-function: ease;
+            animation-duration: 2s;
+            animation-delay: 0.1s;
+        }
+
+        @keyframes homepagecontent {
+            0% {
+                transform: translate(0px, 150px)
+            }
+
+            100% {
+                transform: translate(0px 0px)
+            }
+
+        }
+        .navbar {
+            width: 100%;
+            /* border: 1px solid red; */
+            /* background-color: white; */
+            display: flex;
+            padding-left: 40px;
+            /* background-attachment: scroll; */
+            position: fixed;
+            z-index: 1;
+            background-color: rgb(237, 231, 229);
+        }
+
+        /* .navbar:hover {
+            background-color: white;
+        } */
+
+        .append {
+            margin-right: 200px;
+        }
+
+        .fourthcontainer {
+            height: 100px;
+            width: 100%;
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+.box{
+    border: 2px solid red;
+}
+        .box a {
+            text-decoration: none;
+            color: rgb(43, 43, 43);
+        }
+         .box:hover { 
+            background-color: rgb(139, 137, 137);
+        }
+
+        .navbutton {
+            height: 50px;
+            width: 260px;
+            font-size: 15px;
+            border: 0px;
+            border-radius: 10px;
+            margin-top: 25px;
+            margin-right: 140px;
+            margin-left: 120px;
+            background-color: rgb(143, 99, 56);
+        }
+
+        .search {
+            height: 50px;
+            width: 400px;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        .searchbar {
+            height: 50px;
+            width: 300px;
+            border: 0px;
+            border-radius: 10px;
+        }
+
+        button {
+            height: 40px;
+            width: 90px;
+            border: 0px;
+            border-radius: 10px;
+            background-color: brown;
+        }
+
+        .container {
+            height: 100px;
+            width: 100%;
+            /* border: 2px solid red; */
+            display: grid;
+            align-items: center;
+            grid-template-columns: 100px 100px 100px 100px 100px 100px;
+        }
+
+        .child {
+            height: 40px;
+            width: 100px;
+            filter: brightness(10%);
+            opacity: 0.4;
+        }
+
+        .child:hover {
+            filter: brightness(100%);
+            opacity: 1;
+        }
+
+        .child:nth-child(1) {
+            /* border: 2px solid red; */
+            margin-left: 200px;
+        }
+
+        .child:nth-child(2) {
+            margin-left: 300px;
+        }
+
+        .child:nth-child(3) {
+            margin-left: 400px;
+        }
+
+        .child:nth-child(4) {
+            margin-left: 500px;
+        }
+
+        .child:nth-child(5) {
+            margin-left: 600px;
+        }
+
+        .child:nth-child(6) {
+            margin-left: 700px;
+        }
+
+        .thirdcontainer {
+            height: 850px;
+            width: 100%;
+            /* border: 1px solid red; */
+            background-color: rgb(249, 249, 245);
+            display: flex;
+            position: absolute;
+        }
+
+        .leftcont {
+            height: 700px;
+            width: 600px;
+            /* border: 1px solid red; */
+        }
+
+        .about {
+            height: 30px;
+            width: 100px;
+            margin-top: 200px;
+            margin-left: 50px;
+            /* border: 1px solid red; */
+            border-radius: 5px;
+            text-align: center;
+            text-justify: center;
+            padding-top: 5px;
+            background-color: rgb(241, 161, 161);
+        }
+
+        .hed {
+            padding-top: 0px;
+            margin-top: 0px;
+            margin-left: 50px;
+            font-size: 25px;
+        }
+
+        .para {
+            margin-left: 50px;
+        }
+
+        .read {
+            height: 30px;
+            width: 140px;
+            margin-left: 50px;
+            /* border: 1px solid red; */
+            border-radius: 5px;
+            background-color: rgb(243, 93, 93);
+            text-align: center;
+            padding-top: 6px;
+        }
+
+        .read:hover {
+            background-color: rgb(244, 146, 146);
+
+        }
+
+        .read:hover {
+            transform: translateX(4px);
+        }
+
+        .rightcont {
+            height: 700px;
+        }
+
+        .eius {
+            height: 300px;
+            width: 290px;
+            border: 1px solid white;
+            box-shadow: 40px 5px 26px rgb(235, 235, 226);
+            border-radius: 10px;
+            position: absolute;
+            top: 60px;
+            left: 650px;
+            padding-left: 30px;
+            background-color: white;
+        }
+
+        .rerum {
+            height: 300px;
+            width: 290px;
+            border: 1px solid white;
+            /* box-shadow: 5px 5px 26px gray; */
+            box-shadow: -40px 5px 26px rgb(231, 231, 221);
+            border-radius: 10px;
+            position: absolute;
+            top: 30px;
+            left: 1030px;
+            padding-left: 30px;
+            background-color: white;
+
+        }
+
+        .veniam {
+            height: 300px;
+            width: 290px;
+            border: 1px solid white;
+            /* box-shadow: 5px 5px 26px gray; */
+            box-shadow: 40px 5px 26px rgb(237, 237, 232);
+            border-radius: 10px;
+            position: absolute;
+            top: 390px;
+            left: 650px;
+            padding-left: 30px;
+            background-color: white;
+        }
+
+        .delares {
+            height: 300px;
+            width: 290px;
+            border: 1px solid white;
+            /* box-shadow: 5px 5px 26px gray; */
+            box-shadow: -40px 5px 26px rgb(230, 230, 223);
+            border-radius: 10px;
+            position: absolute;
+            top: 360px;
+            left: 1030px;
+            padding-left: 30px;
+            background-color: white;
+        }
+
+        .fa-building {
+            height: 60px;
+            width: 60px;
+            font-size: 40px;
+            padding-top: 20px;
+            padding-left: 25px;
+            margin-top: 20px;
+            border-radius: 50%;
+            background-color: rgb(244, 230, 230);
+        }
+
+        .fa-building:hover {
+            background-color: rgb(248, 129, 129);
+        }
+
+        .fa-solid {
+            height: 60px;
+            width: 60px;
+            font-size: 40px;
+            padding-top: 20px;
+            padding-left: 25px;
+            margin-top: 20px;
+            border-radius: 50%;
+            background-color: rgb(244, 230, 230);
+        }
+
+        .fa-solid:hover {
+            background-color: rgb(248, 129, 129);
+        }
+
+        .fa-bars {
+            height: 60px;
+            width: 60px;
+            font-size: 40px;
+            padding-top: 20px;
+            padding-left: 10px;
+            margin-top: 20px;
+            border-radius: 50%;
+            background-color: rgb(244, 230, 230);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="append">Append</h1>
+            <div class="fourthcontainer">
+                <div class="box" id="1"><a href="#" style="color: black;">Home</a></div>
+                <div class="box" id="2"><a href="#">About</a></div>
+                <div class="box" id="3"><a href="#">Services</a></div>
+                <div class="box" id="4"><a href="#">Portfolio</a></div>
+                <div class="box" id="5"><a href="#">Pricing</a></div>
+                <div class="box" id="6"><a href="#">Team</a></div>
+                <div class="box" id="7"><a href="#">Blog</a></div>
+                <div class="box" id="8"><a href="#">Dropdown</a>
+                
+                </div>
+                <div class="box" id="9"><a href="#">content</a></div>
+            </div>
+            <button class="navbutton">Get Started</button>
+        </div>
+        <div class="homepage">
+
+            <div  class="homepagecontent" class="anim">
+                <h1>Welcome to Our Website</h1>
+                <h3>We are team of talented designers making websites with Bootstrap</h3>
+                <div class="search">
+                    <input type="search" class="searchbar">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div  class="container" class="anim">
+            <div class="child"><img src="./ASSET/client-1.png" alt="" height="40px" width="100px"></div>
+            <div class="child"><img src="./ASSET/client-2.png" alt="" height="40px" width="100px"></div>
+            <div class="child"><img src="./ASSET/client-3.png" alt="" height="40px" width="100px"></div>
+            <div class="child"><img src="./ASSET/client-4.png" alt="" height="40px" width="100px"></div>
+            <div class="child"><img src="./ASSET/client-5.png" alt="" height="40px" width="100px"></div>
+            <div class="child"><img src="./ASSET/client-6.png" alt="" height="40px" width="100px"></div>
+        </div>
+
+        <div  class="thirdcontainer" >
+            <div class="leftcont" class="anim">
+                <div class="about">
+                    About Us
+                </div>
+                <div class="hed">
+                    <h1> Ducimus rerum libero <br>reprehenderit cumque</h1>
+                </div>
+                <div class="para">
+                    <p>Ipsa sint sit. Quis ducimus tempore dolores impedit et dolor cumque alias maxime. Enim reiciendis
+                        minus et rerum hic non. Dicta quas cum quia maiores iure. Quidem nulla qui assumenda incidunt
+                        voluptatem tempora deleniti soluta.</p>
+                </div>
+                <div class="read">
+                    Read More <span class="arrow">→</span>
+                </div>
+            </div>
+
+            <div class="rightcont" class="anim">
+                <div class="eius">
+                    <i class="fa-regular fa-building"></i>
+                    <h1>Eius provident</h1>
+                    <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem</p>
+                </div>
+                <div class="rerum">
+                    <i class="fa-solid fa-ticket"></i>
+                    <h1>Rerum aperiam</h1>
+                    <p>Autem saepe animi et aut aspernatur culpa facere. Rerum saepe rerum voluptates quia</p>
+                </div>
+                <div class="veniam">
+                    <i class="fa-solid fa-bars"></i>
+                    <h1>Veniam omnis</h1>
+                    <p>Omnis perferendis molestias culpa sed. Recusandae quas possimus. Quod consequatur corrupti</p>
+
+                </div>
+                <div class="delares">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h1>Delares sapiente</h1>
+                    <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+    <footer>
+        
+    </footer>
+</body>
+
+</html>
